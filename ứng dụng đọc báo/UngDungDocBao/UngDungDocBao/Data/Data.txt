@@ -1,0 +1,7 @@
+﻿@Tuổi trẻ
+#Kinh tế^https://tuoitre.vn/rss/kinh-doanh.rss
+#Thế giới^https://tuoitre.vn/rss/the-gioi.rss
+#Văn hóa^https://tuoitre.vn/rss/van-hoa.rss
+@VN Express
+#Thời sự^https://vnexpress.net/rss/thoi-su.rss
+#Pháp luật^https://vnexpress.net/rss/phap-luat.rss
