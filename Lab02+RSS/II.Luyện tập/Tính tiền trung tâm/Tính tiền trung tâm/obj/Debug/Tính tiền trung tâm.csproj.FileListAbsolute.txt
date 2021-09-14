@@ -1,0 +1,10 @@
+D:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab02\II.Luyện tập\Tính tiền trung tâm\Tính tiền trung tâm\bin\Debug\Tính tiền trung tâm.exe.config
+D:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab02\II.Luyện tập\Tính tiền trung tâm\Tính tiền trung tâm\bin\Debug\Tính tiền trung tâm.exe
+D:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab02\II.Luyện tập\Tính tiền trung tâm\Tính tiền trung tâm\bin\Debug\Tính tiền trung tâm.pdb
+D:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab02\II.Luyện tập\Tính tiền trung tâm\Tính tiền trung tâm\obj\Debug\Tính tiền trung tâm.csprojAssemblyReference.cache
+D:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab02\II.Luyện tập\Tính tiền trung tâm\Tính tiền trung tâm\obj\Debug\Tính_tiền_trung_tâm.frmTrungTam.resources
+D:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab02\II.Luyện tập\Tính tiền trung tâm\Tính tiền trung tâm\obj\Debug\Tính_tiền_trung_tâm.Properties.Resources.resources
+D:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab02\II.Luyện tập\Tính tiền trung tâm\Tính tiền trung tâm\obj\Debug\Tính tiền trung tâm.csproj.GenerateResource.cache
+D:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab02\II.Luyện tập\Tính tiền trung tâm\Tính tiền trung tâm\obj\Debug\Tính tiền trung tâm.csproj.CoreCompileInputs.cache
+D:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab02\II.Luyện tập\Tính tiền trung tâm\Tính tiền trung tâm\obj\Debug\Tính tiền trung tâm.exe
+D:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab02\II.Luyện tập\Tính tiền trung tâm\Tính tiền trung tâm\obj\Debug\Tính tiền trung tâm.pdb
