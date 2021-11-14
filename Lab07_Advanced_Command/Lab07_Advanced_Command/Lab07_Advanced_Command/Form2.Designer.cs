@@ -183,6 +183,7 @@ namespace Lab07_Advanced_Command
             this.btnAddNew.TabIndex = 4;
             this.btnAddNew.Text = "Thêm mới";
             this.btnAddNew.UseVisualStyleBackColor = true;
+            this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
             // 
             // nudPrice
             // 

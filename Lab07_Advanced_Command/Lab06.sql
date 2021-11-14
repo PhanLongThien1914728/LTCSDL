@@ -1,4 +1,4 @@
-﻿USE [RestaurantManagement]
+USE RestaurantManagement
 GO
 /****** Object:  Table [dbo].[Account]    Script Date: 6/4/2020 9:31:10 AM ******/
 SET ANSI_NULLS ON
@@ -163,7 +163,7 @@ INSERT [dbo].[Category] ([ID], [Name], [Type]) VALUES (9, N'Lẩu', 1)
 INSERT [dbo].[Category] ([ID], [Name], [Type]) VALUES (10, N'Bia', 0)
 INSERT [dbo].[Category] ([ID], [Name], [Type]) VALUES (11, N'Nước ngọt', 0)
 INSERT [dbo].[Category] ([ID], [Name], [Type]) VALUES (12, N'Cà phê', 0)
-INSERT [dbo].[Category] ([ID], [Name], [Type]) VALUES (13, N'Trà đá', 0)
+INSERT [dbo].[Category] ([ID], [Name], [Type]) VALUES (13, N'Sinh tố', 0)
 SET IDENTITY_INSERT [dbo].[Category] OFF
 SET IDENTITY_INSERT [dbo].[Food] ON 
 
@@ -179,6 +179,20 @@ INSERT [dbo].[Food] ([ID], [Name], [Unit], [FoodCategoryID], [Price], [Notes]) V
 INSERT [dbo].[Food] ([ID], [Name], [Unit], [FoodCategoryID], [Price], [Notes]) VALUES (10, N'Bia Heniken', N'Chai', 10, 20000, NULL)
 INSERT [dbo].[Food] ([ID], [Name], [Unit], [FoodCategoryID], [Price], [Notes]) VALUES (11, N'Súp cua', N'Tô', 1, 15000, NULL)
 INSERT [dbo].[Food] ([ID], [Name], [Unit], [FoodCategoryID], [Price], [Notes]) VALUES (12, N'Thịt kho', N'Đĩa', 5, 25000, N'Theo thời giá')
+INSERT [dbo].[Food] ([ID], [Name], [Unit], [FoodCategoryID], [Price], [Notes]) VALUES (13, N'Salat dầu giấm',N'Đĩa',6,40000,NULL)
+INSERT [dbo].[Food] ([ID], [Name], [Unit], [FoodCategoryID], [Price], [Notes]) VALUES (14, N'Salat dầu giấm hoàng gia',N'Đĩa',6,50000,NULL)
+INSERT [dbo].[Food] ([ID], [Name], [Unit], [FoodCategoryID], [Price], [Notes]) VALUES (15, N'Bia Tiger', N'Chai', 10, 12000, NULL)
+INSERT [dbo].[Food] ([ID], [Name], [Unit], [FoodCategoryID], [Price], [Notes]) VALUES (16, N'Cà phê sữa', N'Ly',12,10000, NULL)
+INSERT [dbo].[Food] ([ID], [Name], [Unit], [FoodCategoryID], [Price], [Notes]) VALUES (17, N'Cà phê đá', N'Ly',12,8000, NULL)
+INSERT [dbo].[Food] ([ID], [Name], [Unit], [FoodCategoryID], [Price], [Notes]) VALUES (18, N'Bạc sỉu', N'Ly',12,20000, NULL)
+INSERT [dbo].[Food] ([ID], [Name], [Unit], [FoodCategoryID], [Price], [Notes]) VALUES (19, N'Sinh tố dâu', N'Ly',13,20000, NULL)
+INSERT [dbo].[Food] ([ID], [Name], [Unit], [FoodCategoryID], [Price], [Notes]) VALUES (19, N'Sinh tố việt quất', N'Ly',13,20000, NULL)
+INSERT [dbo].[Food] ([ID], [Name], [Unit], [FoodCategoryID], [Price], [Notes]) VALUES (19, N'Sinh tố bơ', N'Ly',13,20000, NULL)
+INSERT [dbo].[Food] ([ID], [Name], [Unit], [FoodCategoryID], [Price], [Notes]) VALUES (19, N'Sinh tố xoài', N'Ly',13,20000, NULL)
+INSERT [dbo].[Food] ([ID], [Name], [Unit], [FoodCategoryID], [Price], [Notes]) VALUES (20, N'Tôm hùm hấp', N'Đĩa', 2, 1000000, NULL)
+INSERT [dbo].[Food] ([ID], [Name], [Unit], [FoodCategoryID], [Price], [Notes]) VALUES (21, N'Lẩu thái', N'Đĩa', 9, 150000, NULL)
+INSERT [dbo].[Food] ([ID], [Name], [Unit], [FoodCategoryID], [Price], [Notes]) VALUES (21, N'Lẩu nấm', N'Đĩa', 9, 150000, NULL)
+INSERT [dbo].[Food] ([ID], [Name], [Unit], [FoodCategoryID], [Price], [Notes]) VALUES (21, N'Lẩu kim chi', N'Đĩa', 9, 160000, NULL)
 SET IDENTITY_INSERT [dbo].[Food] OFF
 SET IDENTITY_INSERT [dbo].[Role] ON 
 
@@ -249,8 +263,8 @@ GO
 
 CREATE PROCEDURE InsertFood
 @ID int output,
-@Name nvarchar(3000), 
-@Unit nvarchar(3000), 
+@Name nvarchar(1000), 
+@Unit nvarchar(100), 
 @FoodCategoryID int, 
 @Price int,  
 @Notes nvarchar(3000)
@@ -262,12 +276,6 @@ AS
 
 go
 
-select f.Name, f.Price, bd.Quantity, f.Price * bd.Quantity as Amount from Food f, BillDetails bd, Bills b
-where bd.FoodID = f.ID and bd.InvoiceID = b.ID and bd.InvoiceID = 1
-
-select sum(f.Price * bd.Quantity) from Food f, BillDetails bd, Bills b
-where bd.FoodID = f.ID and bd.InvoiceID = b.ID and bd.InvoiceID = 1
-1
 CREATE PROCEDURE UpdateFood
 	@ID int,
 	@Name nvarchar(1000),
@@ -295,3 +303,13 @@ where bd.FoodID = f.ID and bd.InvoiceID = b.ID and bd.InvoiceID = 1
 
 select sum(f.Price * bd.Quantity) from Food f, BillDetails bd, Bills b
 where bd.FoodID = f.ID and bd.InvoiceID = b.ID and bd.InvoiceID = 1
+go
+CREATE PROCEDURE [InsertCategory]
+	@ID int output,
+	@name nvarchar(1000),
+	@Type int
+AS
+	INSERT INTO [Category] ([Name],[Type])
+	VALUE(@name, @Type)
+	SELECT @ID = SCOPE_IDENTITY();
+GO

@@ -78,31 +78,41 @@ namespace Lab07_Advanced_Command
 
         private void tsmCalculateQuantity_Click(object sender, EventArgs e)
         {
-            if (cbbCategory.SelectedIndex == -1) return;
-            string connectionString = "server=.; database = Lab06 ; Integrated Security = true;";
-            SqlConnection conn = new SqlConnection(connectionString);
-            SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "SELECT @numSaleFood = sum(Quantity) FROM BillDetails WHERE FoodID = @foodId";
-            if(dgvFoodList.SelectedRows.Count > 0)
+            string connectionString = "server=.; database = Lab06; Integrated Security = true; ";
+            SqlConnection connection = new SqlConnection(connectionString);
+            SqlCommand command = connection.CreateCommand();
+            command.CommandText = "SELECT @numSaleFood = sum(Quantity) FROM BillDetails WHERE FoodID = @foodId";
+
+            if (dgvFoodList.SelectedRows.Count > 0)
             {
                 DataGridViewRow selectedRow = dgvFoodList.SelectedRows[0];
+
                 DataRowView rowView = selectedRow.DataBoundItem as DataRowView;
 
-                cmd.Parameters.Add("@foodId", SqlDbType.Int);
-                cmd.Parameters["@foodId"].Value = rowView["ID"];
+                command.Parameters.Add("@foodId", SqlDbType.Int);
+                command.Parameters["@foodId"].Value = rowView["ID"];
 
-                cmd.Parameters.Add("@numSaleFood", SqlDbType.Int);
-                cmd.Parameters["@numSaleFood"].Direction = ParameterDirection.Output;
+                command.Parameters.Add("@numSaleFood", SqlDbType.Int);
+                command.Parameters["@numSaleFood"].Direction = ParameterDirection.Output;
 
-                conn.Open();
-                cmd.ExecuteNonQuery();
+                connection.Open();
 
-                string result = cmd.Parameters["@numSaleFood"].Value.ToString();
-                MessageBox.Show("Tổng số lượng món " + rowView["Name"] + " đã bán là : " + result + " " + rowView["Unit"]);
-                conn.Close();
+                command.ExecuteNonQuery();
+
+                string result = command.Parameters["@numSaleFood"].Value.ToString();
+                string message = $"Tổng số lượng món {rowView["Name"]} đã bán là {result} {rowView["Unit"]}";
+
+                if (string.IsNullOrWhiteSpace(result))
+                    message = $"Món {rowView["Name"]} chưa bán được {rowView["Unit"]} nào!";
+
+                MessageBox.Show(message);
+
+                connection.Close();
             }
-            cmd.Dispose();
-            conn.Dispose();
+
+            command.Dispose();
+            connection.Dispose();
+
         }
 
         private void tsmAddFood_Click(object sender, EventArgs e)
@@ -143,6 +153,12 @@ namespace Lab07_Advanced_Command
             DataView foodView = new DataView(foodTable, filterExpression, sortExpression, rowStateFilter);
 
             dgvFoodList.DataSource = foodView;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Account accountform = new Account();
+            accountform.Show(this);
         }
     }
 }

@@ -9,3 +9,16 @@ A:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab07\Lab07_Advanced_Command\La
 A:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab07\Lab07_Advanced_Command\Lab07_Advanced_Command\obj\Debug\Lab07_Advanced_Command.exe
 A:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab07\Lab07_Advanced_Command\Lab07_Advanced_Command\obj\Debug\Lab07_Advanced_Command.pdb
 A:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab07\Lab07_Advanced_Command\Lab07_Advanced_Command\obj\Debug\Lab07_Advanced_Command.frmFoodInfoForm.resources
+A:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab07_Advanced_Command\Lab07_Advanced_Command\Lab07_Advanced_Command\bin\Debug\Lab07_Advanced_Command.exe.config
+A:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab07_Advanced_Command\Lab07_Advanced_Command\Lab07_Advanced_Command\bin\Debug\Lab07_Advanced_Command.exe
+A:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab07_Advanced_Command\Lab07_Advanced_Command\Lab07_Advanced_Command\bin\Debug\Lab07_Advanced_Command.pdb
+A:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab07_Advanced_Command\Lab07_Advanced_Command\Lab07_Advanced_Command\obj\Debug\Lab07_Advanced_Command.csproj.AssemblyReference.cache
+A:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab07_Advanced_Command\Lab07_Advanced_Command\Lab07_Advanced_Command\obj\Debug\Lab07_Advanced_Command.Form1.resources
+A:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab07_Advanced_Command\Lab07_Advanced_Command\Lab07_Advanced_Command\obj\Debug\Lab07_Advanced_Command.frmFoodInfoForm.resources
+A:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab07_Advanced_Command\Lab07_Advanced_Command\Lab07_Advanced_Command\obj\Debug\Lab07_Advanced_Command.Properties.Resources.resources
+A:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab07_Advanced_Command\Lab07_Advanced_Command\Lab07_Advanced_Command\obj\Debug\Lab07_Advanced_Command.csproj.GenerateResource.cache
+A:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab07_Advanced_Command\Lab07_Advanced_Command\Lab07_Advanced_Command\obj\Debug\Lab07_Advanced_Command.csproj.CoreCompileInputs.cache
+A:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab07_Advanced_Command\Lab07_Advanced_Command\Lab07_Advanced_Command\obj\Debug\Lab07_Advanced_Command.exe
+A:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab07_Advanced_Command\Lab07_Advanced_Command\Lab07_Advanced_Command\obj\Debug\Lab07_Advanced_Command.pdb
+A:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab07_Advanced_Command\Lab07_Advanced_Command\Lab07_Advanced_Command\obj\Debug\Lab07_Advanced_Command.OrdersForm.resources
+A:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab07_Advanced_Command\Lab07_Advanced_Command\Lab07_Advanced_Command\obj\Debug\Lab07_Advanced_Command.Account.resources

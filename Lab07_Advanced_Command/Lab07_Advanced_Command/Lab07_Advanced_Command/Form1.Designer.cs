@@ -35,7 +35,6 @@ namespace Lab07_Advanced_Command
             this.dgvFoodList = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmCalculateQuantity = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmSeperator = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAddFood = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmUpdateFood = new System.Windows.Forms.ToolStripMenuItem();
             this.lblcotatca = new System.Windows.Forms.Label();
@@ -44,6 +43,7 @@ namespace Lab07_Advanced_Command
             this.lblCatName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFoodList)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -81,11 +81,10 @@ namespace Lab07_Advanced_Command
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmCalculateQuantity,
-            this.tsmSeperator,
             this.tsmAddFood,
             this.tsmUpdateFood});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(186, 92);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(186, 70);
             // 
             // tsmCalculateQuantity
             // 
@@ -93,12 +92,6 @@ namespace Lab07_Advanced_Command
             this.tsmCalculateQuantity.Size = new System.Drawing.Size(185, 22);
             this.tsmCalculateQuantity.Text = "Tính số lượng đã bán";
             this.tsmCalculateQuantity.Click += new System.EventHandler(this.tsmCalculateQuantity_Click);
-            // 
-            // tsmSeperator
-            // 
-            this.tsmSeperator.Name = "tsmSeperator";
-            this.tsmSeperator.Size = new System.Drawing.Size(185, 22);
-            this.tsmSeperator.Text = "toolStripMenuItem1";
             // 
             // tsmAddFood
             // 
@@ -172,11 +165,22 @@ namespace Lab07_Advanced_Command
             this.txtTimKiem.TabIndex = 6;
             this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(818, 409);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Xem tài khoản";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(955, 444);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.lblCatName);
             this.Controls.Add(this.lblQuantity);
@@ -207,11 +211,11 @@ namespace Lab07_Advanced_Command
         private System.Windows.Forms.Label lblCatName;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tsmCalculateQuantity;
-        private System.Windows.Forms.ToolStripMenuItem tsmSeperator;
         private System.Windows.Forms.ToolStripMenuItem tsmAddFood;
         private System.Windows.Forms.ToolStripMenuItem tsmUpdateFood;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Button button1;
     }
 }
 

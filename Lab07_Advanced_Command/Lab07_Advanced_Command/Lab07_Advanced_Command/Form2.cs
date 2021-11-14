@@ -55,38 +55,44 @@ namespace Lab07_Advanced_Command
         {
             try
             {
-                string connectionString = "server=.; database = Lab06; Integrated Security = true ;";
+                string connectionString = "server=.; database = Lab06; Integrated Security = true; ";
                 SqlConnection conn = new SqlConnection(connectionString);
+
                 SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandText = "EXCUTE InsertFood @id OUTPUT,@name,@unit ,@foodCategoryID, @price, @notes";
+                cmd.CommandText = "EXECUTE InsertFood @id OUTPUT, @name, @unit, @foodCategoryID, @price, @notes";
 
                 cmd.Parameters.Add("@id", SqlDbType.Int);
                 cmd.Parameters.Add("@name", SqlDbType.NVarChar, 1000);
-                cmd.Parameters.Add("@unit", SqlDbType.NVarChar, 1000);
-                cmd.Parameters.Add("@foodCategoryId", SqlDbType.Int);
+                cmd.Parameters.Add("@unit", SqlDbType.NVarChar, 100);
+                cmd.Parameters.Add("@foodCategoryID", SqlDbType.Int);
                 cmd.Parameters.Add("@price", SqlDbType.Int);
                 cmd.Parameters.Add("@notes", SqlDbType.NVarChar, 3000);
+
                 cmd.Parameters["@id"].Direction = ParameterDirection.Output;
 
                 cmd.Parameters["@name"].Value = txtName.Text;
                 cmd.Parameters["@unit"].Value = txtUnit.Text;
-                cmd.Parameters["@foodCategoryId"].Value = cbbCateName.SelectedValue;
+                cmd.Parameters["@foodCategoryID"].Value = cbbCateName.SelectedValue;
                 cmd.Parameters["@price"].Value = nudPrice.Value;
                 cmd.Parameters["@notes"].Value = txtNotes.Text;
 
                 conn.Open();
 
                 int numRowAffected = cmd.ExecuteNonQuery();
+
                 if (numRowAffected > 0)
                 {
                     string foodID = cmd.Parameters["@id"].Value.ToString();
-                    MessageBox.Show("Successfully adding new food, Food ID = " + foodID, "Message");
+                    MessageBox.Show("Successfully adding new food. Food ID = " + foodID, "Message");
                     this.ResetText();
                 }
                 else
                 {
                     MessageBox.Show("Adding food failed");
                 }
+
+                conn.Close();
+                conn.Dispose();
             }
             catch (SqlException exception)
             {
@@ -131,37 +137,40 @@ namespace Lab07_Advanced_Command
         {
             try
             {
-                string connectionString = "server=.; database = Lab06 ; Integrated Security = true;";
+                string connectionString = "server=.; database = Lab06; Integrated Security = true; ";
                 SqlConnection conn = new SqlConnection(connectionString);
+
                 SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandText = "EXECUTE UpdateFood @id, @name, @unit, @FoodCategoryID, @price, @notes";
+                cmd.CommandText = "EXECUTE UpdateFood @id, @name, @unit, @foodCategoryID, @price, @notes";
 
                 cmd.Parameters.Add("@id", SqlDbType.Int);
                 cmd.Parameters.Add("@name", SqlDbType.NVarChar, 1000);
-                cmd.Parameters.Add("@unit", SqlDbType.NVarChar, 1000);
-                cmd.Parameters.Add("@foodCategoryId", SqlDbType.Int);
+                cmd.Parameters.Add("@unit", SqlDbType.NVarChar, 100);
+                cmd.Parameters.Add("@foodCategoryID", SqlDbType.Int);
                 cmd.Parameters.Add("@price", SqlDbType.Int);
                 cmd.Parameters.Add("@notes", SqlDbType.NVarChar, 3000);
 
                 cmd.Parameters["@id"].Value = int.Parse(txtbIDfood.Text);
                 cmd.Parameters["@name"].Value = txtName.Text;
                 cmd.Parameters["@unit"].Value = txtUnit.Text;
-                cmd.Parameters["@foodCategoryId"].Value = cbbCateName.SelectedValue;
+                cmd.Parameters["@foodCategoryID"].Value = cbbCateName.SelectedValue;
                 cmd.Parameters["@price"].Value = nudPrice.Value;
                 cmd.Parameters["@notes"].Value = txtNotes.Text;
 
                 conn.Open();
+
                 int numRowAffected = cmd.ExecuteNonQuery();
 
                 if (numRowAffected > 0)
                 {
-                    MessageBox.Show("Successfully updatting food", "Message");
+                    MessageBox.Show("Successfully updating food", "Message");
                     this.ResetText();
                 }
                 else
                 {
                     MessageBox.Show("Updating food failed");
                 }
+
                 conn.Close();
                 conn.Dispose();
             }
@@ -179,6 +188,21 @@ namespace Lab07_Advanced_Command
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnAddNew_Click(object sender, EventArgs e)
+        {
+            /*string connectionString = "server=.; database = Lab06; Integrated Security = true; ";
+            SqlConnection conn = new SqlConnection(connectionString);
+
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "EXXECUTE InsertCategory @id OUTPUT , @name ,@type";
+            cmd.Parameters.Add("@id", SqlDbType.Int);
+            cmd.Parameters.Add("@name", sqlDbType.Nvarchar, 1000);
+            cmd.Parameters.Add("@type", SqlDbType.Int);
+
+            cmd.Parameters["@id"].Direction = ParameterDirection.Output;
+            cmd.Parameters["@name"].Value = txtName.Text;*/
         }
     }
 }
