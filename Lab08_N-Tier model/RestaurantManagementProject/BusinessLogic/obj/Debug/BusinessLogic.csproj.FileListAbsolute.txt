@@ -1,0 +1,9 @@
+A:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab08\RestaurantManagementProject\BusinessLogic\bin\Debug\BusinessLogic.dll
+A:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab08\RestaurantManagementProject\BusinessLogic\bin\Debug\BusinessLogic.pdb
+A:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab08\RestaurantManagementProject\BusinessLogic\bin\Debug\DataAccess.dll
+A:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab08\RestaurantManagementProject\BusinessLogic\bin\Debug\DataAccess.pdb
+A:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab08\RestaurantManagementProject\BusinessLogic\obj\Debug\BusinessLogic.csproj.AssemblyReference.cache
+A:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab08\RestaurantManagementProject\BusinessLogic\obj\Debug\BusinessLogic.csproj.CoreCompileInputs.cache
+A:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab08\RestaurantManagementProject\BusinessLogic\obj\Debug\BusinessLogic.csproj.CopyComplete
+A:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab08\RestaurantManagementProject\BusinessLogic\obj\Debug\BusinessLogic.dll
+A:\nam3hk1\Lập trình cơ sở dữ liệu\Lab\Lab08\RestaurantManagementProject\BusinessLogic\obj\Debug\BusinessLogic.pdb
